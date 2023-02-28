@@ -1,9 +1,12 @@
 pipeline {
   agent { label 'linux' }
 
+  stages { 
     stage('Scan') {
       steps {
         sh 'trivy jndansi/gym:latest'
       }
     }
+  }  
 }
+
