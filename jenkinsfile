@@ -1,0 +1,9 @@
+pipeline {
+  agent { label 'linux' }
+
+    stage('Scan') {
+      steps {
+        sh 'trivy jndansi/gym:latest'
+      }
+    }
+}
